@@ -1,4 +1,3 @@
-import os
 import paramiko
 import pandas as pd
 import sqlite3
