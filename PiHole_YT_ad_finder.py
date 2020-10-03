@@ -28,7 +28,7 @@ def download_database():    # Download query database from Pi-hole
         print(e)
         return False
 
-#download_database()    # Download or update (it will overwrite old file) database from Pi-hole
+download_database()    # Download or update (it will overwrite old file) database from Pi-hole - Comment it if there is no need for update
 
 # Read dataframe from database
 conn = sqlite3.connect(r'D:\RASPBERRY PI\DATA\pihole-FTL.db')
