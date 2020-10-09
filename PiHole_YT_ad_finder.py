@@ -34,8 +34,9 @@ conn = sqlite3.connect(r'D:\RASPBERRY PI\DATA\pihole-FTL.db')
 df_pihole = pd.read_sql_query('SELECT * FROM queries', conn)
 conn.close()
 
-# Convert UNIX serial to datetime
-df_pihole['timestamp'] = pd.to_datetime(df_pihole['timestamp'], unit='s')
+# Convert UNIX serial to datetime, then convert default output of to_datetime from UTC to CET, and than to tz_naive by tz_localize(None)
+df_pihole['timestamp'] = pd.to_datetime(df_pihole['timestamp'], unit='s').dt.tz_localize('UTC').dt.tz_convert('CET').dt.tz_localize(None)
+
 df_pihole.set_index(['timestamp', 'id'], inplace=True)  # Must set multiindex as there are records with same time
 
 df_pihole['Ad'] = ''   # add column Ad
