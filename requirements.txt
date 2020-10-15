@@ -4,3 +4,4 @@
 pandas
 paramiko
 sqlite3
+opencv-python
