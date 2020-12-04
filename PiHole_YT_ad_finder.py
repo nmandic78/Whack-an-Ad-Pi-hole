@@ -42,8 +42,7 @@ df_pihole['timestamp'] = pd.to_datetime(df_pihole['timestamp'], unit='s').dt.tz_
 print(df_pihole.index)
 
 df_pihole.set_index(['timestamp', 'id'], inplace=True)  # Must set multiindex as there are records with same time
-# df_pihole.index.get_level_values('timestamp').tz_localize('CET')
-
+df_pihole.sort_index(inplace=True)
 
 df_pihole['Ad'] = ''   # add column Ad
 
