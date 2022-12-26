@@ -14,7 +14,7 @@ def download_database():    # Download query database from Pi-hole
 
     try:
         # put right IP and new password if changed from default;'raspberry' (should be changed!)
-        ssh.connect('192.168.0.22', username="pi", password="mane77peru22")
+        ssh.connect('192.168.0.11', username="pi", password="raspberry")
         print('Connected')
         sftp = ssh.open_sftp()
         print('SFTP opened')
