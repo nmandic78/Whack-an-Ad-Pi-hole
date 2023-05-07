@@ -36,5 +36,4 @@ Try blocking addresses with high share (depends on ad times recording method so 
 Mechanics behind youtube ad serving is unknown so it could be that same addresses are used for both, videos and ads, interchangeably. In that case, blocking youtube ads on TV (or similar devices) is not hit and miss, but unsolvable...
 
 NOTE:
-I use Raspberry Pi Zero W for Pi-hole and it showed unreliable (freezing every day). I'm waiting for better cable and SD card (if that's the cause).
-ESP32-CAM also freeze after few hours (got pretty hot too). Trying to find cause-solution or will get another cam.
+I use Raspberry Pi Zero W for Pi-hole and it showed unreliable (freezing every day). And it seems, it is the case what I wrote in las sentence. Well, it was interesting.
